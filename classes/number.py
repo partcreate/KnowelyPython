@@ -39,7 +39,10 @@ class NumberInfo:
 
     @property
     def decimal(self) -> int:
-        return len(str(self._number).split(".")[1]) if self.is_float else 0
+
+        length = len(f"{self._number:.15f}".rstrip("0").split(".")[1]) if self.is_float else 0
+        print(self._number, " : ", length)
+        return length
 
     @property
     def is_positive(self) -> bool:
