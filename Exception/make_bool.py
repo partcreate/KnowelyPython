@@ -1,5 +1,6 @@
 from typing import Any
 
+
 def from_int(value: Any) -> bool:
     if isinstance(value, int):
         if 0 <= value <= 1:
@@ -57,6 +58,7 @@ bool_value_3 = make_bool("false")
 
 # bool_value_4 = make_bool({True})
 # BoolConversionError: Cannot convert to the bool <class 'set'> type
+
 
 def make_bool_2(value: Any) -> bool:
     try:
