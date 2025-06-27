@@ -1,4 +1,6 @@
 from decimal import Decimal
+from typing import Any
+
 
 a_1 = Decimal(0)
 a_2 = Decimal(1)
@@ -14,3 +16,17 @@ number = 1.234
 str_num = f"{number:.15f}".rstrip("0")
 print(Decimal.from_float(1e-05))
 print(str_num)
+
+
+def deci_mal(num: Any) -> int:
+
+    if isinstance(num, int):
+        return 0
+    try:
+        d = Decimal(str(num))
+        return -d.as_tuple().exponent if d.as_tuple().exponent < 0 else 0
+    except Exception:
+        return 0
+
+
+print(deci_mal(1e-05))
