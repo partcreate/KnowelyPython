@@ -10,9 +10,9 @@ class SlowResponse(Exception):
         self.name = name
         self.response = response
 
-        super().__init__(f"Warning! {name} has "
-                f"a slow response of {response} ms.")
-
+    def __str__(self) -> str:
+        return (f"Warning! {self.name} has "
+                f"a slow response of {self.response} ms.")
 
 class ExtraSlowResponse(SlowResponse):
     min_response = 76
@@ -22,8 +22,9 @@ class ExtraSlowResponse(SlowResponse):
 
         super().__init__(name, response)
 
-        self.args = (f"Alarm! {name} has "
-                f"a very slow response of {response} ms.",)
+    def __str__(self) -> str:
+        return (f"Alarm! {self.name} has "
+                f"a very slow response of {self.response} ms.")
 
 
 class DangerouslySlowResponse(ExtraSlowResponse):
@@ -33,8 +34,9 @@ class DangerouslySlowResponse(ExtraSlowResponse):
 
         super().__init__(name, response)
 
-        self.args = (f"Nuclear power station is in danger! {name} has "
-                f"a dangerously slow response of {response} ms.",)
+    def __str__(self) -> str:
+        return (f"Nuclear power station is in danger! {self.name} has "
+                f"a dangerously slow response of {self.response} ms.")
 
 
 def check_device_response(device: dict[str, Any]) -> None:
@@ -58,7 +60,7 @@ def check_station_devices(devices: list[dict[str, Any]]) -> None:
         except SlowResponse as e:
             true_response = False
 
-            error_message = str(e)
+            error_message = e
 
             if isinstance(e, DangerouslySlowResponse):
                 extra_message = " We are in serious trouble!"
@@ -85,12 +87,12 @@ check_station_devices([
 # Alarm! Reactor shaft has a very slow response of 81 ms. Needs to be repaired!
 # Nuclear power station is in danger! Pressure compensator has a dangerously slow response of 149 ms. We are in serious trouble!
 
-"""
+
 check_station_devices([
   {"name": "Reactor shaft", "response": 40},
   {"name": "Polar crane", "response": 25},
   {"name": "Steam generator", "response": 11},
   {"name": "Pressure compensator", "response": 50},
 ])
-"""
+
 # Responses of all devices does not exceed the norm.

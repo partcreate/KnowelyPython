@@ -136,6 +136,7 @@ check_station_devices([
 # Alarm! Reactor shaft has a very slow response of 81 ms. Needs to be repaired!
 # Nuclear power station is in danger! Pressure compensator has a dangerously slow response of 149 ms. We are in serious trouble!
 
+"""
 print("\n--- Testfall 2: Alle Antworten im Normbereich ---")
 check_station_devices([
     {"name": "Reactor shaft", "response": 40},
@@ -157,4 +158,4 @@ check_station_devices([
     {"name": "Control Rods", "response": 76}, # ExtraSlow
     {"name": "Emergency Core", "response": 30}, # Normal
 ])
-
+"""
