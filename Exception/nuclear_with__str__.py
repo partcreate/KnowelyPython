@@ -18,10 +18,6 @@ class ExtraSlowResponse(SlowResponse):
     min_response = 76
     max_response = 100
 
-    def __init__(self, name: str, response: int) -> None:
-
-        super().__init__(name, response)
-
     def __str__(self) -> str:
         return (f"Alarm! {self.name} has "
                 f"a very slow response of {self.response} ms.")
@@ -29,10 +25,6 @@ class ExtraSlowResponse(SlowResponse):
 
 class DangerouslySlowResponse(ExtraSlowResponse):
     min_response = 101
-
-    def __init__(self, name: str, response: int) -> None:
-
-        super().__init__(name, response)
 
     def __str__(self) -> str:
         return (f"Nuclear power station is in danger! {self.name} has "
