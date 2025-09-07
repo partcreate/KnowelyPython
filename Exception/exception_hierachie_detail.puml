@@ -1,0 +1,107 @@
+@startuml
+skinparam ClassAttributeIconSize 0
+
+abstract class BaseException {
+}
+
+BaseException <|-- SystemExit
+BaseException <|-- KeyboardInterrupt
+BaseException <|-- GeneratorExit
+BaseException <|-- Exception
+
+abstract class Exception {
+}
+
+Exception <|-- StopIteration
+Exception <|-- StopAsyncIteration
+Exception <|-- ArithmeticError
+Exception <|-- AssertionError
+Exception <|-- AttributeError
+Exception <|-- BufferError
+Exception <|-- EOFError
+Exception <|-- ImportError
+Exception <|-- LookupError
+Exception <|-- MemoryError
+Exception <|-- NameError
+Exception <|-- OSError
+Exception <|-- ReferenceError
+Exception <|-- RuntimeError
+Exception <|-- SyntaxError
+Exception <|-- SystemError
+Exception <|-- TypeError
+Exception <|-- ValueError
+Exception <|-- Warning
+
+abstract class ArithmeticError {
+}
+ArithmeticError <|-- FloatingPointError
+ArithmeticError <|-- OverflowError
+ArithmeticError <|-- ZeroDivisionError
+
+abstract class LookupError {
+}
+LookupError <|-- IndexError
+LookupError <|-- KeyError
+
+abstract class NameError {
+}
+NameError <|-- UnboundLocalError
+
+abstract class OSError {
+}
+OSError <|-- BlockingIOError
+OSError <|-- ChildProcessError
+OSError <|-- ConnectionError
+OSError <|-- FileExistsError
+OSError <|-- FileNotFoundError
+OSError <|-- InterruptedError
+OSError <|-- IsADirectoryError
+OSError <|-- NotADirectoryError
+OSError <|-- PermissionError
+OSError <|-- ProcessLookupError
+OSError <|-- TimeoutError
+
+abstract class ConnectionError {
+}
+ConnectionError <|-- BrokenPipeError
+ConnectionError <|-- ConnectionAbortedError
+ConnectionError <|-- ConnectionRefusedError
+ConnectionError <|-- ConnectionResetError
+
+abstract class RuntimeError {
+}
+RuntimeError <|-- NotImplementedError
+RuntimeError <|-- RecursionError
+
+abstract class SyntaxError {
+}
+SyntaxError <|-- IndentationError
+
+abstract class IndentationError {
+}
+IndentationError <|-- TabError
+
+abstract class ValueError {
+}
+ValueError <|-- UnicodeError
+
+abstract class UnicodeError {
+}
+UnicodeError <|-- UnicodeDecodeError
+UnicodeError <|-- UnicodeEncodeError
+UnicodeError <|-- UnicodeTranslateError
+
+abstract class Warning {
+}
+Warning <|-- DeprecationWarning
+Warning <|-- PendingDeprecationWarning
+Warning <|-- RuntimeWarning
+Warning <|-- SyntaxWarning
+Warning <|-- UserWarning
+Warning <|-- FutureWarning
+Warning <|-- ImportWarning
+Warning <|-- UnicodeWarning
+Warning <|-- BytesWarning
+Warning <|-- ResourceWarning
+
+@enduml
