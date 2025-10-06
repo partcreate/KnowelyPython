@@ -1,0 +1,16 @@
+# Nützliche Links
+
+* [os](https://www.geeksforgeeks.org/os-module-python-examples/)
+* [os Documentation](https://docs.python.org/3/library/os.html)
+* [shutil](https://www.geeksforgeeks.org/shutil-module-in-python/)
+* [sys](https://www.geeksforgeeks.org/python-sys-module/)
+* [argparse](https://zetcode.com/python/argparse/)
+* [math](https://www.w3schools.com/python/module_math.asp)
+* [random](https://www.geeksforgeeks.org/python-random-module/)
+* [time](https://www.programiz.com/python-programming/time)
+* [datetime](https://www.geeksforgeeks.org/python-datetime-module/)
+* [datetime’s Format Codes](https://www.w3schools.com/python/python_datetime.asp)
+* [decimal](https://www.pythontutorial.net/advanced-python/python-decimal/)
+* [json](https://www.programiz.com/python-programming/json)
+* [pickle](https://www.geeksforgeeks.org/pickle-python-object-serialization/)
+* [dataclasses](https://www.geeksforgeeks.org/understanding-python-dataclasses/)
