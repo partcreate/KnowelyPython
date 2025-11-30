@@ -1,13 +1,16 @@
 
 ## Hash
 
-Um zu verstehen, warum Dictionaries so schnell arbeiten, müssen wir die **Hash-Funktion**, die **Hash-Tabelle**, **Kollisionen**, die **Größenanpassung der Tabelle (table resizing)** sowie die Magic-Methoden **`__getitem__`** und **`__setitem__`** besprechen.
+Um zu verstehen, warum Dictionaries so schnell arbeiten, 
+müssen wir die **Hash-Funktion**, die **Hash-Tabelle**, **Kollisionen**, die **Größenanpassung der Tabelle (table resizing)** 
+sowie die Magic-Methoden **`__getitem__`** und **`__setitem__`** besprechen.
 
 [](#hash-function)
 
 ### Hash-Funktion
 
-Eine Hash-Funktion akzeptiert ein Objekt und gibt einen numerischen Wert zurück – die eingebaute Python-Funktion `hash()` führt dieses Hashing durch. Für eine ganze Zahl gibt die Hash-Funktion die Zahl selbst zurück:
+Eine Hash-Funktion akzeptiert ein Objekt und gibt einen numerischen Wert zurück – die eingebaute Python-Funktion `hash()` führt dieses Hashing durch. 
+Für eine ganze Zahl gibt die Hash-Funktion die Zahl selbst zurück:
 
 ```python
 print(hash(1))		# 1
@@ -40,7 +43,8 @@ print(hash((1,)))	    # -6644214454873602895
 print(hash((1, "a")))	# 8571628832376313798
 ```
 
-In diesen Beispielen haben wir Hash-Werte nur für unveränderliche Datentypen gezeigt, und das aus gutem Grund, denn wenn wir versuchen, einen veränderlichen (mutable) Typ zu hashen, tritt ein Fehler auf:
+In diesen Beispielen haben wir Hash-Werte nur für unveränderliche Datentypen gezeigt, 
+und das aus gutem Grund, denn wenn wir versuchen, einen veränderlichen (mutable) Typ zu hashen, tritt ein Fehler auf:
 
 ```python
 print(hash([1, 2, 3]))

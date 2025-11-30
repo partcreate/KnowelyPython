@@ -1,7 +1,9 @@
 
 ## Dictionary
 
-Continuing the previous point, searching for an element in a dictionary takes constant time, with an algorithmic complexity of `O(1)`. This complexity applies to most dictionary operations, making dictionaries faster for data storage compared to other collections. Here’s a comparison of the algorithmic complexity for operations in dictionaries and lists:
+Continuing the previous point, searching for an element in a dictionary takes constant time, with an algorithmic complexity of `O(1)`. 
+This complexity applies to most dictionary operations, making dictionaries faster for data storage compared to other collections. 
+Here’s a comparison of the algorithmic complexity for operations in dictionaries and lists:
 
 ![compare_list_dict_algorithm_complexity](algorithm_complexity.png)
 
